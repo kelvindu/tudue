@@ -1,0 +1,12 @@
+.button-delete{
+  display: none;
+  color: #0f0201;
+}
+
+.item-list:hover .button-delete{
+  display: block;
+}
+
+.item-check:checked + .item-name {
+  text-decoration: line-through;
+}
