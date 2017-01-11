@@ -1,16 +1,25 @@
 var express = require('express');
-var todoControllers = require('./controllers/todoControllers');
 var app = express();
+var mongoose = require('mongoose');
+var config = require('./config');
+var controller = require('./controllers');
 
-//setting up the template view
-app.set('view engine','ejs');
+//setting up the port
+var port = process.env.PORT || 7080;
 
-//setting up the static files resource
-app.use(express.static('./public'));
+//setting up the view engine and views directories
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
 
-//firing up todo controllers
-todoControllers(app);
+//connecting to the databases
+mongoose.connect(config.getDbConnectionString());
 
-//setting up the listening port
-app.listen(7080);
-console.log('You are listening to port 7080');
+//setting up the middleware static files for css and assets
+app.use('/assets',express.static(__dirname+'/public'));
+
+//call out all of the controller and routes
+controller(app);
+
+app.listen(port);
+console.log('listening now to port : '+port);
