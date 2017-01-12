@@ -20,10 +20,10 @@ var HelloMessage = React.createClass({
       <DefaultLayout title={this.props.title}>
         <h1>Hello {this.props.name} welcome to tudue</h1>
         <div id="todo-lists">
-          <h2>Now, what to do...?</h2>
+          <h2>now, what to do...?</h2>
           <ul>{todos}</ul>
+          <AddItem/>
         </div>
-        <AddItem/>
       </DefaultLayout>
     );
   }
