@@ -1,0 +1,28 @@
+body{
+  background: #bd7;
+  width: 80%;
+  font-family: 'Open Sans',sans-serif;
+  margin: auto;
+}
+
+h1{
+  background: #4a9;
+  padding: 10%;
+  font-weight: 400;
+  font-size: 1500%;
+  color: #fff;
+  text-align: center;
+  margin: 5% 0 auto;
+  box-shadow: 0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+h2{
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+  color: #26484a;
+  background: #ddd;
+  padding: 70px;
+  margin: 0;
+  box-shadow: 0 17px 50px 0 rgba(0,0,0,.19);
+}
