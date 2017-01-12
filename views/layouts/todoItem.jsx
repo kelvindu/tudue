@@ -6,7 +6,7 @@ module.exports = React.createClass({
       <li>
         <div className="item-list">
           <input type="checkbox" defaultChecked={this.props.item.isDone} className="item-check" id={this.props.item.id}/>
-          <span className="item-name">{this.props.item.todo}</span>
+          <label className="item-name" htmlFor={this.props.item.id}>{this.props.item.todo}</label>
           <a className="button-delete" href="#" id={this.props.item.id}>X</a>
         </div>
       </li>

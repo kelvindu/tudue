@@ -6,7 +6,7 @@ module.exports = React.createClass({
     return(
       <DefaultLayout title={this.props.title}>
         <h1>404</h1>
-        <h2>It means not found</h2>
+        <h2>It means not found, maybe try asking something else</h2>
       </DefaultLayout>
     );
   }

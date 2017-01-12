@@ -20,7 +20,6 @@ module.exports = function(app){
   });
 
   app.post('/todo/check',urlencodedParser,function(req,res){
-    console.log(req.body.id);
     if(req.body.id){
       Todos.findByIdAndUpdate(req.body.id,{isDone: req.body.isDone},function(err,todo){
         if(err) throw err;
